@@ -1,0 +1,14 @@
+name = "HolidayCalendars"
+uuid = "805b3977-dd70-49b2-89e1-5b1e213f8a24"
+authors = ["Iain Skett <iain.skett@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+RDates = "42063a9e-4db3-11e9-2c9c-956b066f8181"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
