@@ -12,9 +12,11 @@ coveralls: true
 jobs:
   include:
     - stage: "Documentation"
+      env: JULIA_PKG_SERVER=""
       julia: 1.6
       os: linux
       script:
-        - julia --project=docs/ -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate()'
-        - julia --project=docs/ docs/make.jl
+        - julia --color=yes -e 'using Pkg; VERSION >= v"1.5-" && !isdir(joinpath(DEPOT_PATH[1], "registries", "General")) && Pkg.Registry.add("General")'
+        - julia --color=yes --project=docs/ -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate()'
+        - julia --color=yes --project=docs/ docs/make.jl
       after_success: skip
