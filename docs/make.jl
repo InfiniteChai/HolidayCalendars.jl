@@ -6,7 +6,6 @@ makedocs(
     clean = false,
     format = Documenter.HTML(),
     sitename = "HolidayCalendars.jl",
-    devbranch = "main",
     authors = "Iain Skett",
     pages = [
         "Holiday Calendars" => "index.md",
@@ -14,5 +13,6 @@ makedocs(
 )
 
 deploydocs(
-    repo = "github.com/InfiniteChai/HolidayCalendars.jl.git"
+    repo = "github.com/InfiniteChai/HolidayCalendars.jl.git",
+    devbranch = "main"
 )
