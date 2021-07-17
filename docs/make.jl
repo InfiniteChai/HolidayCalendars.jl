@@ -14,5 +14,6 @@ makedocs(
 
 deploydocs(
     repo = "github.com/InfiniteChai/HolidayCalendars.jl.git",
-    devbranch = "main"
+    devbranch = "main",
+    devurl = "latest"
 )
